@@ -20,6 +20,13 @@
   --shadow-color: rgba(105, 167, 255, 0.5);
 }
 
+/* ========== RESET GLOBALE ========== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -28,23 +35,9 @@ html, body, #root {
   color: var(--text-color);
   font-family: var(--font-family);
   transition: background-color var(--transition), color var(--transition);
-}
-
-.containner {
-  min-height: 100%;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color var(--transition), color var(--transition);
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
-}
-
-main.content {
-  padding: 3rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -57,6 +50,25 @@ a:hover {
   color: #3b82f6;
 }
 
+/* ========== LAYOUT ========== */
+.containner {
+  min-height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition), color var(--transition);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+main.content {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========== TITRES ========== */
 h1, h2, h3, h4 {
   color: var(--primary-color);
   margin-bottom: 1rem;
@@ -82,6 +94,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
+/* ========== SECTION ========== */
 section {
   margin-bottom: 4rem;
   padding: 2.5rem;
@@ -90,6 +103,7 @@ section {
   box-shadow: 0 8px 24px var(--shadow-color);
 }
 
+/* ========== BOUTONS ========== */
 button, .cta-button {
   background-color: var(--primary-color);
   color: #fff;
@@ -101,6 +115,8 @@ button, .cta-button {
   transition: background-color var(--transition), transform var(--transition);
   box-shadow: 0 5px 15px var(--shadow-color);
   margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
 }
 
 button:hover, .cta-button:hover {
@@ -108,6 +124,7 @@ button:hover, .cta-button:hover {
   transform: scale(1.05);
 }
 
+/* ========== IMAGES ========== */
 img, .hero-img {
   max-width: 100%;
   height: auto;
@@ -130,13 +147,14 @@ img, .hero-img {
   }
 
   section {
-    padding: 2rem 1.8rem;
+    padding: 2rem 1.5rem;
     margin-bottom: 3rem;
   }
 
   button, .cta-button {
     padding: 0.7rem 1.4rem;
     font-size: 1rem;
+    width: 100%;
   }
 }
 
@@ -154,11 +172,11 @@ img, .hero-img {
   }
 
   main.content {
-    padding: 1.8rem 1.2rem;
+    padding: 1.8rem 1rem;
   }
 
   section {
-    padding: 1.8rem 1.2rem;
+    padding: 1.5rem 1rem;
     margin-bottom: 2.5rem;
   }
 
