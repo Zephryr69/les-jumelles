@@ -1,0 +1,151 @@
+/* src/pages/Inscription.css */
+.intro-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inscription-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color, #222);
+  box-sizing: border-box;
+}
+
+.inscription-page h1 {
+  text-align: center;
+  color: var(--primary-color, #2978ff);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+/* Section info inscription */
+.inscription-info {
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inscription-info h2 {
+  color: var(--primary-color, #2978ff);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--secondary-color, #a3c4ff);
+  padding-bottom: 0.3rem;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.6rem;
+}
+
+.inscription-info p,
+.inscription-info ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color, #444);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inscription-info ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.inscription-info a {
+  color: var(--primary-color, #2978ff);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.inscription-info a:hover {
+  text-decoration: underline;
+  color: #1c52d0;
+}
+
+/* ========== TABLEAU DES FRAIS ========== */
+
+/* Wrapper scrollable pour mobile */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollbar customisée */
+.table-container::-webkit-scrollbar {
+  height: 6px;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color, #a3c4ff);
+  border-radius: 3px;
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--text-color, #222);
+  min-width: 680px; /* important pour forcer le scroll mobile */
+}
+
+.fees-table thead {
+  background-color: var(--primary-color, #2978ff);
+  color: white;
+}
+
+.fees-table th,
+.fees-table td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--secondary-color, #a3c4ff);
+  text-align: center;
+}
+
+.fees-table tbody tr:nth-child(even) {
+  background-color: var(--secondary-color, #e3ecff);
+}
+
+.fees-table tbody tr:hover {
+  background-color: var(--primary-color, #2978ff);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+  .inscription-page {
+    padding: 1rem;
+  }
+
+  .inscription-page h1 {
+    font-size: 2rem;
+  }
+
+  .inscription-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .inscription-info p,
+  .inscription-info ul {
+    font-size: 0.95rem;
+  }
+
+  .fees-table th,
+  .fees-table td {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.6rem;
+    white-space: nowrap;
+  }
+}

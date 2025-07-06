@@ -1,0 +1,279 @@
+/* =============== PAGE GLOBALE =============== */
+.actualites-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  animation: fadeInPage 0.8s ease-in;
+}
+
+/* Animation d’entrée */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TITRE PRINCIPAL */
+.page-title,
+.main-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color, #1e63e2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* =============== BLOC RÉSULTATS =============== */
+.resultats-section,
+.exam-results {
+  background: linear-gradient(135deg, #4c8fff, #1e63e2);
+  color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(30, 99, 226, 0.4);
+  margin-bottom: 3rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TITRE DES RÉSULTATS */
+.section-title,
+.big-news-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* LIGNE DE POURCENTAGES */
+.resultats-highlight,
+.highlight-box {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* CARTE DE POURCENTAGE */
+.exam-result,
+.highlight-text {
+  background: #ffffff;
+  color: #1e63e2;
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 160px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+}
+
+.exam-result:hover,
+.highlight-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(30, 99, 226, 0.3);
+}
+
+.exam-result h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* POURCENTAGE */
+.pourcentage,
+.percent {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0e3db3;
+  margin: 0.3rem 0 0;
+  display: block;
+}
+
+/* DESCRIPTION COMPLÉMENTAIRE */
+.desc {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  color: #333;
+}
+
+/* TEXTE DE FÉLICITATIONS */
+.congrats {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #d1e5ff;
+}
+
+/* =============== NEWS CARDS =============== */
+.news-card {
+  padding: 1.7rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  background: #f8f9fb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  animation: fadeInCard 0.8s ease-in;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+}
+
+.news-card h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+/* Texte de news */
+.news-card p {
+  color: inherit;
+  line-height: 1.6;
+}
+
+/* =============== THEMES CLAIRS =============== */
+.news-card.orange {
+  border-left: 6px solid #ff9800;
+  background: #fff3e0;
+  color: #5d4037;
+}
+
+.news-card.grey {
+  border-left: 6px solid #bdbdbd;
+  background: #eeeeee;
+  color: #1a1a1a;
+}
+
+/* =============== MODE SOMBRE =============== */
+.dark .news-card.grey {
+  background: #2a2f3a;
+  border-left-color: #bdbdbd;
+  color: #f0f0f0;
+}
+
+.dark .news-card.orange {
+  background: #3a2c17;
+  border-left-color: #ffb74d;
+  color: #ffe0b2;
+}
+
+.dark .news-card h2 {
+  color: #ffffff;
+}
+
+.dark .news-card p {
+  color: #e0e0e0;
+}
+
+/* =============== BLOC BAC À VENIR =============== */
+.pending-results {
+  padding: 2rem;
+  border-left: 6px solid #1e63e2;
+  border-radius: 14px;
+  margin-bottom: 2.5rem;
+  color: #1a1a1a;
+  box-shadow: 0 4px 16px rgba(30, 99, 226, 0.1);
+}
+
+.dark .pending-results {
+  background: #1e2b40;
+  color: #fff;
+  border-left-color: #6caeff;
+}
+
+/* Slogan attente */
+.stay-tuned {
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #0e3db3;
+}
+
+.dark .stay-tuned {
+  color: #c7dfff;
+}
+
+/* =============== COURS DE VACANCES =============== */
+.vacation-course {
+  padding: 2rem;
+  background: #e3f2fd;
+  border-left: 6px solid #2196f3;
+  border-radius: 14px;
+  margin-bottom: 2.5rem;
+  color: #1a1a1a;
+}
+
+.dark .vacation-course {
+  background: #233447;
+  color: #fff;
+  border-left-color: #6ec6ff;
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .big-news-title,
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .resultats-highlight,
+  .highlight-box {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .exam-result,
+  .highlight-text {
+    padding: 1.5rem;
+  }
+
+  .pourcentage,
+  .percent {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .exam-result,
+  .highlight-text {
+    min-width: 100%;
+  }
+
+  .exam-results,
+  .pending-results,
+  .vacation-course {
+    padding: 1.5rem;
+  }
+}

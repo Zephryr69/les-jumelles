@@ -1,0 +1,113 @@
+.formations-page {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color, #222);
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.formations-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.formations-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color, #2978ff);
+  margin-bottom: 1rem;
+}
+
+.formations-header p {
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+/* Section titres */
+.formations-section {
+  margin-bottom: 3.5rem;
+}
+
+.formations-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color, #2978ff);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Cycle Cards */
+.cycle-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.cycle-card {
+  flex: 1 1 300px;
+  background-color: var(--bg-color, #f9f9f9);
+  border-left: 5px solid var(--primary-color, #2978ff);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.cycle-card:hover {
+  transform: scale(1.02);
+}
+
+.cycle-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+}
+
+.cycle-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Particularités pédagogiques */
+.pedagogie-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pedagogie-list li {
+  background: var(--bg-color, #f1f4ff);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-color, #2978ff);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .formations-header h1 {
+    font-size: 2rem;
+  }
+
+  .formations-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cycle-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .cycle-card p,
+  .pedagogie-list li {
+    font-size: 0.95rem;
+  }
+}

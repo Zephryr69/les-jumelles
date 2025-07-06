@@ -3,10 +3,12 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Produits from "./pages/Produits";
+import APropos from "./pages/About";
 import Contact from "./pages/Contact";
-import ProductDetail from "./pages/ProductDetail";
+import Formations from "./pages/Formations";
+import Inscription from "./pages/Inscription";
+import VieScolaire from "./pages/VieScolaire";
+import Actualites from "./pages/Actualites";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,7 +25,6 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
 
-  // ✅ Correction GitHub Pages : restaure l’URL après redirection depuis 404.html
   useEffect(() => {
     const redirect = sessionStorage.getItem("redirect");
     if (redirect) {
@@ -63,10 +64,12 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-            <Route path="/a-propos" element={<About isDarkMode={isDarkMode} />} />
-            <Route path="/produits" element={<Produits isDarkMode={isDarkMode} />} />
+            <Route path="/a-propos" element={<APropos isDarkMode={isDarkMode} />} />
+            <Route path="/formations" element={<Formations isDarkMode={isDarkMode} />} />
+            <Route path="/inscription" element={<Inscription isDarkMode={isDarkMode} />} />
+            <Route path="/vie-scolaire" element={<VieScolaire isDarkMode={isDarkMode} />} />
+            <Route path="/actualites" element={<Actualites isDarkMode={isDarkMode} />} />
             <Route path="/contact" element={<Contact isDarkMode={isDarkMode} />} />
-            <Route path="/produit/:id" element={<ProductDetail isDarkMode={isDarkMode} />} />
             <Route path="*" element={<Home isDarkMode={isDarkMode} />} />
           </Routes>
         </AnimatePresence>

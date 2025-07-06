@@ -1,90 +1,128 @@
-/* ===========================
-   NAVBAR GÉNÉRALE
-=========================== */
+/* ===========================NAVBAR GÉNÉRALE=========================== */
 .navbar {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  border-bottom: 2px solid #e9ecef;
-  transition: all 0.3s ease-in-out;
+  padding: 12px 24px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-bottom: 2px solid var(--secondary-color);
+  box-shadow: 0 3px 10px var(--shadow-color);
+  transition: background-color var(--transition), color var(--transition);
+  z-index: 1000;
 }
 
-.navbar.light {
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-.navbar.dark {
-  background-color: #1e293b;
-  color: #f8f9fa;
-  border-bottom: 2px solid #555;
-}
-
-/* ===========================
-   LOGO & ENTÊTE
-=========================== */
+/* ===========================LOGO & ENTÊTE=========================== */
 .header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, #4c8fff, #1e63e2);
+  box-shadow: 0 6px 15px rgba(30, 99, 226, 0.6);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.header:hover {
+  box-shadow: 0 8px 25px rgba(30, 99, 226, 0.9);
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  padding: 5px;
+  padding: 4px;
   border-radius: 50%;
-  background: linear-gradient(to right, #017fd3, #2e2b19);
-  transition: transform 0.6s ease-in-out;
+  background-color: aliceblue;
+  box-shadow: 0 0 8px rgba(223, 228, 234, 0.7);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(30, 99, 226, 1);
+}
+
+/* Titre et slogan */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  min-width: 0;
+  overflow: visible;
 }
 
 .header h2 {
-  font-size: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-family: var(--font-family);
+  font-weight: 800;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  text-align: center;
 }
 
-/* ===========================
-   MENU DE NAVIGATION
-=========================== */
+.slogan {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d1d9ff;
+  margin: 2px 0 0 0;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ===========================MENU DE NAVIGATION=========================== */
 .navbar ul {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
 }
 
 .navbar ul li {
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
+  font-weight: 600;
   cursor: pointer;
-  padding: 5px 15px;
-  border-radius: 5px;
+  padding: 6px 16px;
+  border-radius: var(--border-radius);
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s;
 }
 
 .navbar ul li:hover {
-  background: linear-gradient(90deg, #ffd700, #ffc107);
+  background: linear-gradient(145deg, #4c8fff, #1e63e2);
   color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(30, 99, 226, 0.5), 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* ===========================
-   LIENS
-=========================== */
+/* ===========================LIENS=========================== */
 .nav-link {
   text-decoration: none;
   color: inherit;
-  font-weight: bold;
   transition: color 0.3s ease;
 }
 
@@ -92,581 +130,103 @@
   color: #ffd700;
 }
 
-/* ===========================
-   BOUTON TOGGLE DARK/LIGHT
-=========================== */
+/* ===========================TOGGLE ICON=========================== */
 .toggle-icon {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin-top: 8px;
+  flex-shrink: 0;
 }
 
 .toggle-icon:hover {
-  transform: rotate(20deg);
+  transform: rotate(15deg);
 }
 
-
-/* ===========================
-   BOUTON BURGER PERSONNALISÉ
-=========================== */
+/* ===========================BURGER ICON=========================== */
 .burger {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 8px;
+  flex-shrink: 0;
 }
 
 .custom-menu-icon {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   transition: transform 0.3s ease;
 }
 
 .custom-menu-icon:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
-/* Cacher le bouton burger par défaut */
+
 .burger.mobile-only {
   display: none;
 }
 
-/* L'afficher uniquement sur les petits écrans */
+/* ===========================RESPONSIVE DESIGN=========================== */
 @media screen and (max-width: 768px) {
-  .burger.mobile-only {
-    display: flex;
+  .navbar {
+    padding: 1rem;
   }
 
-  /* Facultatif : cacher les liens nav sur mobile si sidebar est utilisée */
+  .header {
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header h2 {
+    font-size: 1.1rem;
+    max-width: none;
+    white-space: normal;
+  }
+
+  .slogan {
+    font-size: 0.75rem;
+  }
+
   .navbar ul {
     display: none;
   }
-}
-
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
 
   .burger.mobile-only {
     display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
+    margin: 0 auto;
   }
 
   .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
+    display: block;
+    margin: 0 auto;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
+/* =========================== MODE SOMBRE POUR .header ============================ */
+.dark .header {
+  background: linear-gradient(135deg, #1e2a4a, #0c1735);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
+.dark .header:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
+.dark .header h2 {
+  color: #e0e7ff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* <-- Centrer horizontalement */
-  }
-
-  .header {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centre le logo et titre */
-    gap: 10px;
-  }
-
-  .burger.mobile-only {
-    display: flex;
-    margin: 0 auto; /* Centre le bouton burger */
-  }
-
-  .toggle-icon {
-    margin: 0 auto; /* Centre le toggle */
-    display: block; /* Assure qu’il prenne toute la ligne */
-  }
-
-  .navbar ul {
-    display: none; /* Cache les liens sur mobile */
-  }
+.dark .slogan {
+  color: #b3c7ff;
 }

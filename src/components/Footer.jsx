@@ -1,68 +1,49 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhoneAlt
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = ({ isDarkMode }) => {
   return (
     <footer className={`footer ${isDarkMode ? "dark" : "light"}`}>
       <div className="footer-content">
-        {/* SLOGAN + RÉSEAUX */}
-        <div className="footer-section logo-social">
-          <p className="slogan">Max iPhone – Vos iPhones à prix imbattables !</p>
-          <div className="social-icons">
-            <a href="https://www.facebook.com/tonprofil" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF />
-            </a>
-            <a href="https://www.instagram.com/tonprofil" target="_blank" rel="noopener noreferrer">
-              <FaInstagram />
-            </a>
-            <a href="https://twitter.com/tonprofil" target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
-            </a>
-          </div>
-        </div>
 
-        {/* CONTACT */}
-        <div className="footer-section contact-us">
-          <h3>Contact</h3>
-          <p><FaMapMarkerAlt /> Porto-Novo, Bénin</p>
-          <p><FaPhoneAlt /> +229 97 00 00 00</p>
-          <p><FaEnvelope /> contact@maxiphone.bj</p>
-        </div>
-
-        {/* NAVIGATION */}
-        <div className="footer-section links">
-          <h3 className="centered-title">Navigation</h3>
-          <ul className="nav-links">
-            <li>
-              <Link to="/" className="nav-link">Accueil</Link>
-            </li>
-            <li>
-              <Link to="/produits" className="nav-link">Produits</Link>
-            </li>
-            <li>
-              <Link to="/a-propos" className="nav-link">À propos</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="nav-link">Contact</Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* À PROPOS */}
-        <div className="about-site">
-          <h4>À propos de Max iPhone</h4>
-          <p className="about-text">
-            Max iPhone est votre boutique de confiance spécialisée dans la vente d’iPhones reconditionnés et neufs. Qualité, rapidité et prix défiant toute concurrence.
+        {/* SLOGAN EN TÊTE */}
+        <div className="footer-section slogan-section">
+          <p className="slogan">
+            « Les Jumelles » – Discipline. Suivi. Innovation.
           </p>
+        </div>
+
+        <div className="footer-sections-container">
+          {/* CONTACT */}
+          <div className="footer-section contact-us">
+            <h3>Contact</h3>
+            <p><FaMapMarkerAlt /> Tokpota, Porto-Novo (près de l’Hôtel Porto-La Belle)</p>
+            <p><FaPhoneAlt /> 97 29 44 34 / 96 67 70 04 </p>
+            <p><FaEnvelope /> ecole.jumelles@gmail.com</p>
+          </div>
+
+          {/* NAVIGATION */}
+          <div className="footer-section links">
+            <h3 className="centered-title">Navigation</h3>
+            <ul className="nav-links">
+              <li><Link to="/" className="nav-link">Accueil</Link></li>
+              <li><Link to="/formations" className="nav-link">Formations</Link></li>
+              <li><Link to="/inscription" className="nav-link">Inscription</Link></li>
+              <li><Link to="/vie-scolaire" className="nav-link">Vie scolaire</Link></li>
+              <li><Link to="/actualites" className="nav-link">Actualités</Link></li>
+              <li><Link to="/contact" className="nav-link">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* À PROPOS */}
+          <div className="footer-section about-site">
+            <h4>À propos</h4>
+            <p className="about-text">
+              Le Complexe Scolaire Bilingue « Les Jumelles » forme des élèves de la maternelle à la terminale avec rigueur, innovation et excellence. L’apprentissage de l’anglais y débute dès la maternelle.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

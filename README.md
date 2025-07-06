@@ -1,5 +1,2 @@
-# Max iPhone
-
-Ce projet est basé sur React + Vite.
-
-Max iPhone propose les meilleurs téléphones reconditionnés au Bénin. Développé avec un design moderne, responsive, et pensé pour la vente.
+# CSB "Les Jumelles"
+Site vitrine pour le Complexe Scolaire Bilingue "Les Jumelles", situé à Porto-Novo.
