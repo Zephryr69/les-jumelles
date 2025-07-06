@@ -183,6 +183,42 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+.inscription-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre horizontalement tous les enfants */
+  margin-bottom: 3rem;
+}
+
+.inscription-section .cta-button {
+  margin-top: 1rem;
+  max-width: 250px; /* limite la largeur du bouton */
+  width: 100%; /* le bouton prend toute la largeur max */
+  text-align: center;
+}
+.contact-quick {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre horizontalement les enfants */
+  text-align: center; /* centre aussi le texte */
+  margin-bottom: 3rem;
+}
+
+.contact-quick .whatsapp-button {
+  display: inline-block; /* pour que le bouton soit bien considéré comme un bloc centré */
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem; /* tu peux ajuster si besoin */
+  border-radius: 10px;
+  background-color: #25d366;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-quick .whatsapp-button:hover {
+  background-color: #1ebe57;
+}
 
 /* Responsive */
 @media screen and (max-width: 768px) {

@@ -193,7 +193,11 @@
     max-width: none;
     white-space: normal;
   }
-
+.header p {
+    font-size: 0.8rem;
+    max-width: none;
+    white-space: normal;
+  }
   .slogan {
     font-size: 0.75rem;
   }

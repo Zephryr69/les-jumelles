@@ -1,10 +1,11 @@
+/* ========== BASE ========== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
 
 :root {
-  --bg-color: #e6f0ff; /* bleu ciel clair */
-  --text-color: #022c6d; /* bleu nuit profond */
-  --primary-color: #69a7ff; /* bleu vif */
-  --secondary-color: #a3c4ff; /* bleu pâle */
+  --bg-color: #e6f0ff;
+  --text-color: #022c6d;
+  --primary-color: #69a7ff;
+  --secondary-color: #a3c4ff;
   --shadow-color: rgba(105, 167, 255, 0.3);
   --border-radius: 16px;
   --font-family: 'Poppins', Arial, sans-serif;
@@ -29,22 +30,23 @@ html, body, #root {
   transition: background-color var(--transition), color var(--transition);
 }
 
-/* Appliquer le style à toute l'application */
 .containner {
   min-height: 100%;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color var(--transition), color var(--transition);
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 
-/* Ajuster le contenu principal */
 main.content {
   padding: 3rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Liens par défaut */
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -55,7 +57,6 @@ a:hover {
   color: #3b82f6;
 }
 
-/* Titres */
 h1, h2, h3, h4 {
   color: var(--primary-color);
   margin-bottom: 1rem;
@@ -81,7 +82,6 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Section générique */
 section {
   margin-bottom: 4rem;
   padding: 2.5rem;
@@ -90,7 +90,6 @@ section {
   box-shadow: 0 8px 24px var(--shadow-color);
 }
 
-/* Boutons */
 button, .cta-button {
   background-color: var(--primary-color);
   color: #fff;
@@ -101,9 +100,76 @@ button, .cta-button {
   cursor: pointer;
   transition: background-color var(--transition), transform var(--transition);
   box-shadow: 0 5px 15px var(--shadow-color);
+  margin-top: 1rem;
 }
 
 button:hover, .cta-button:hover {
   background-color: #3b82f6;
   transform: scale(1.05);
+}
+
+img, .hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  main.content {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+  }
+
+  section {
+    padding: 2rem 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  button, .cta-button {
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  main.content {
+    padding: 1.8rem 1.2rem;
+  }
+
+  section {
+    padding: 1.8rem 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  button, .cta-button {
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+  }
+
+  .exam-result, .news-card {
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -39,7 +39,7 @@ function Home({ isDarkMode }) {
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-button"
-            style={{display: "inline-block", marginTop: "1rem", backgroundColor: "#25d366", color: "#fff", padding: "0.8rem 1.5rem", borderRadius: "10px", fontWeight: "700", textDecoration: "none"}}
+            style={{ display: "inline-block", marginTop: "1rem", backgroundColor: "#25d366", color: "#fff", padding: "0.8rem 1.5rem", borderRadius: "10px", fontWeight: "700", textDecoration: "none" }}
           >
             💬 Contact rapide via WhatsApp
           </a>
@@ -80,13 +80,10 @@ function Home({ isDarkMode }) {
       {/* Inscription */}
       <section className="inscription-section">
         <h2>Inscription</h2>
-        <p>
-          Retrouvez toutes les informations nécessaires pour inscrire votre enfant au Complexe Scolaire Bilingue Les Jumelles.
-        </p>
-        <Link to="/inscription" className="cta-button">
-          Informations sur l'inscription
-        </Link>
+        <p>Retrouvez toutes les informations nécessaires pour inscrire votre enfant au Complexe Scolaire Bilingue Les Jumelles.</p>
+        <Link to="/inscription" className="cta-button">Informations sur l'inscription</Link>
       </section>
+
 
       {/* Actualités */}
       <section
@@ -114,10 +111,11 @@ function Home({ isDarkMode }) {
         >
           💬 Contact rapide via WhatsApp
         </a>
-        <p style={{marginTop: "1rem"}}>
+        <p style={{ marginTop: "1rem" }}>
           Ou par téléphone : <a href="tel:+229XXXXXXXXX">+229 XX XX XX XX</a>
         </p>
       </section>
+
     </div>
   );
 }

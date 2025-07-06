@@ -33,7 +33,8 @@
 .slogan {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #38bdf8; /* bleu ciel clair */
+  color: #38bdf8;
+  /* bleu ciel clair */
   text-shadow: 1px 1px 3px rgba(56, 189, 248, 0.7);
 }
 
@@ -68,7 +69,8 @@
 .footer-section.contact-us svg {
   flex-shrink: 0;
   vertical-align: middle;
-  color: #38bdf8; /* icon color matching slogan */
+  color: #38bdf8;
+  /* icon color matching slogan */
 }
 
 /* ====== SECTION NAVIGATION ====== */
@@ -101,7 +103,8 @@
 }
 
 .nav-link:hover {
-  color: #0ea5e9; /* bleu vif */
+  color: #0ea5e9;
+  /* bleu vif */
 }
 
 /* ====== SECTION À PROPOS ====== */
@@ -153,6 +156,12 @@
 
   .about-text {
     margin: 0 auto;
+  }
+
+  .slogan {
+    font-size: 1.1rem;
+    max-width: none;
+    white-space: normal;
   }
 
   .nav-links {
