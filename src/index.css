@@ -23,12 +23,11 @@
 /* ========== RESET GLOBALE ========== */
 *, *::before, *::after {
   box-sizing: border-box;
-  max-width: 100%;
   overflow-wrap: break-word;
 }
 
 html, body, #root {
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
@@ -36,8 +35,16 @@ html, body, #root {
   font-family: var(--font-family);
   transition: background-color var(--transition), color var(--transition);
   width: 100%;
-  max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100vh;
+  overflow-y: auto !important;
+}
+
+/* Ne pas limiter tous les éléments en largeur */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -45,26 +52,27 @@ a {
   text-decoration: none;
   transition: color var(--transition);
 }
-
 a:hover {
   color: #3b82f6;
 }
 
 /* ========== LAYOUT ========== */
 .containner {
-  min-height: 100%;
+  min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color var(--transition), color var(--transition);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  padding: 0; /* évite de restreindre le contenu horizontalement */
 }
 
 main.content {
+  flex: 1;
   padding: 3rem 2rem;
-  max-width: 1100px;
+  width: 100%;
+  max-width: none; /* autorise le contenu à prendre toute la largeur */
   margin: 0 auto;
 }
 
@@ -75,19 +83,16 @@ h1, h2, h3, h4 {
   line-height: 1.3;
   text-shadow: 1px 1px 4px var(--secondary-color);
 }
-
 h1 {
   font-size: 3rem;
   font-weight: 900;
   text-align: center;
 }
-
 h2 {
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
 }
-
 p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -101,6 +106,7 @@ section {
   background-color: var(--secondary-color);
   border-radius: var(--border-radius);
   box-shadow: 0 8px 24px var(--shadow-color);
+  width: 100%;
 }
 
 /* ========== BOUTONS ========== */
@@ -118,17 +124,9 @@ button, .cta-button {
   display: inline-block;
   text-align: center;
 }
-
 button:hover, .cta-button:hover {
   background-color: #3b82f6;
   transform: scale(1.05);
-}
-
-/* ========== IMAGES ========== */
-img, .hero-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -136,21 +134,16 @@ img, .hero-img {
   h1 {
     font-size: 2.2rem;
   }
-
   h2 {
     font-size: 1.8rem;
   }
-
   main.content {
     padding: 2rem 1.5rem;
-    max-width: 100%;
   }
-
   section {
     padding: 2rem 1.5rem;
     margin-bottom: 3rem;
   }
-
   button, .cta-button {
     padding: 0.7rem 1.4rem;
     font-size: 1rem;
@@ -162,32 +155,25 @@ img, .hero-img {
   h1 {
     font-size: 1.8rem;
   }
-
   h2 {
     font-size: 1.4rem;
   }
-
   p {
     font-size: 1rem;
   }
-
   main.content {
     padding: 1.8rem 1rem;
   }
-
   section {
     padding: 1.5rem 1rem;
     margin-bottom: 2.5rem;
   }
-
   button, .cta-button {
     width: 100%;
     padding: 0.8rem 0;
     font-size: 1.1rem;
   }
-
   .exam-result, .news-card {
     width: 100%;
-    max-width: 100%;
   }
 }

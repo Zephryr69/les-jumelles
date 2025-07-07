@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -13,8 +13,8 @@ import Actualites from "./pages/Actualites";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import ScrollToTop from "./components/ScrollToTop";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTop from "./components/ScrollToTop"; // ✅ Ajouté
+import ScrollToTopButton from "./components/ScrollToTopButton"; // ✅ Ajouté
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -43,13 +43,15 @@ function App() {
 
   return (
     <div className={`containner ${isDarkMode ? "dark" : "light"}`}>
+      <ScrollToTop /> {/* ✅ Scroll automatique au changement de page */}
       <Header
         isDarkMode={isDarkMode}
         toggleTheme={toggleTheme}
         onMenuClick={toggleSidebar}
       />
 
-      <AnimatePresence mode="wait">
+      {/* ✅ Affichage animé de la Sidebar */}
+      <AnimatePresence>
         {sidebarOpen && (
           <Sidebar
             isDarkMode={isDarkMode}
@@ -58,8 +60,7 @@ function App() {
         )}
       </AnimatePresence>
 
-      <ScrollToTop />
-
+      {/* ✅ Affichage animé des routes */}
       <main className="content">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
@@ -76,7 +77,7 @@ function App() {
       </main>
 
       <Footer isDarkMode={isDarkMode} />
-      <ScrollToTopButton />
+      <ScrollToTopButton /> {/* ✅ Bouton animé pour retour en haut */}
     </div>
   );
 }

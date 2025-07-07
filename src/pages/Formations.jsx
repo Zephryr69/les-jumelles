@@ -1,5 +1,6 @@
 // src/pages/Formations.jsx
 import "./Formations.css";
+import React from "react";
 
 function Formations() {
   return (

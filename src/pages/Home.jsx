@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useRef } from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
+import React from "react";
 
 function Home({ isDarkMode }) {
   const whyRef = useRef(null);
@@ -35,7 +36,7 @@ function Home({ isDarkMode }) {
 
           {/* Bouton WhatsApp contact rapide */}
           <a
-            href="https://wa.me/229XXXXXXXXX"
+            href="https://wa.me/22997858951"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-button"
@@ -104,7 +105,7 @@ function Home({ isDarkMode }) {
         <h2>Nous contacter</h2>
         <p>Une question ? Un renseignement ? N’hésitez pas à nous joindre rapidement via WhatsApp.</p>
         <a
-          href="https://wa.me/229XXXXXXXXX"
+          href="https://wa.me/22997858951"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-button"
@@ -112,7 +113,7 @@ function Home({ isDarkMode }) {
           💬 Contact rapide via WhatsApp
         </a>
         <p style={{ marginTop: "1rem" }}>
-          Ou par téléphone : <a href="tel:+229XXXXXXXXX">+229 XX XX XX XX</a>
+          Ou par téléphone : <a href="tel:+2290197294434">+229 01 97 29 44 34</a>
         </p>
       </section>
 

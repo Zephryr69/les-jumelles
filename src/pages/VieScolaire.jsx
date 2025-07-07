@@ -1,5 +1,6 @@
 // src/pages/VieScolaire.jsx
 import "./VieScolaire.css";
+import React from "react";
 
 function VieScolaire() {
   return (
@@ -40,7 +41,7 @@ function VieScolaire() {
           <p><strong>Jeudi & Vendredi :</strong><br />Lacoste vert foncé + bas bleu nuit</p>
           <p><strong>Coût :</strong><br />
             Uniformes + Lacoste : 14 000 F CFA<br />
-            T-shirt de sport : 2 000 F CFA
+            T-shirt de sport : 3 000 F CFA
           </p>
         </div>
       </section>

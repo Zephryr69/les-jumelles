@@ -1,6 +1,7 @@
 // src/pages/Contact.jsx
 import "./Contact.css";
 import PropTypes from "prop-types";
+import React from "react";
 
 function Contact({ isDarkMode }) {
   return (
@@ -13,16 +14,16 @@ function Contact({ isDarkMode }) {
       <section className="contact-section">
         <div className="contact-block">
           <h2>📍 Adresses</h2>
-          <p><strong>École-mère :</strong> Quartier Tokpota, près de l’Hôtel Porto-La Belle</p>
+          <p><strong>École-mère :</strong> Quartier Tokpota 1, près de l’Hôtel Porto-La Belle</p>
           <p><strong>Annexe :</strong> Proximité de l’Hôtel Palais Oriental</p>
           <p><strong>Ville :</strong> Porto-Novo, Bénin</p>
-          <p><strong>Boîte postale :</strong> 102 BP 2906</p>
+          <p><strong>Boîte postale :</strong> 02 BP 2906</p>
         </div>
 
         <div className="contact-block">
           <h2>📞 Téléphones</h2>
-          <p><a href="tel:+22997254434">+229 97 29 44 34</a></p>
-          <p><a href="tel:+22996677004">+229 96 67 70 04</a></p>
+          <p><a href="tel:+22997254434">+229 01 97 29 44 34</a></p>
+          <p><a href="tel:+22996677004">+229 01 96 67 70 04</a></p>
         </div>
 
         <div className="contact-block">
@@ -38,7 +39,7 @@ function Contact({ isDarkMode }) {
 
       <section className="contact-whatsapp-center">
         <a
-          href="https://wa.me/22997254434"
+          href="https://wa.me/22997294434"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-button"

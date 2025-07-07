@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./Header.css";
-
+import React from "react";
 import menuIcon from "../assets/menu-icon.png";;
 import logo1 from "../assets/logo-navbar.png";  // tu peux le remplacer par un logo des Jumelles
 import sunIcon from "../assets/Sun.png";

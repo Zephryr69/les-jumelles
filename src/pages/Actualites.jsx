@@ -1,5 +1,6 @@
 // src/pages/Actualites.jsx
 import "./Actualites.css";
+import React from "react";
 
 function Actualites() {
   return (
@@ -17,7 +18,7 @@ function Actualites() {
           </div>
           <div className="exam-result">
             <h3>BEPC</h3>
-            <p className="pourcentage">99%</p>
+            <p className="pourcentage">98%</p>
             <p className="desc">Collège : presque 100% !</p>
           </div>
         </div>
@@ -39,7 +40,7 @@ function Actualites() {
       <article className="news-card orange">
         <h2>📚 Cours de vacances</h2>
         <p>
-          Les cours de vacances commencent le <strong>samedi 27 juillet</strong> pour les classes du primaire et du secondaire.
+          Les cours de vacances commencent le <strong>Lundi 28 juillet</strong> pour les classes du primaire et du secondaire.
         </p>
         <p>
           Objectif : consolider les acquis et préparer sereinement la rentrée scolaire.

@@ -1,5 +1,6 @@
 import "./About.css";
 import PropTypes from "prop-types";
+import React from "react";
 
 function About({ isDarkMode }) {
   return (
@@ -43,7 +44,7 @@ function About({ isDarkMode }) {
       <div className="about-contact">
         <a
           className="whatsapp-btn"
-          href="https://wa.me/229XXXXXXXXX"
+          href="https://wa.me/22997294434"
           target="_blank"
           rel="noopener noreferrer"
         >

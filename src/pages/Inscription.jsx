@@ -1,5 +1,6 @@
 // src/pages/Inscription.jsx
 import "./Inscription.css";
+import React from "react";
 
 function Inscription() {
   return (
