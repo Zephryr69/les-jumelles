@@ -1,6 +1,7 @@
 ﻿// src/components/ScrollToTopButton.jsx
 import React, { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import "./ScrollToTopButton.css";
 
