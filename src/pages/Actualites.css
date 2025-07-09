@@ -193,33 +193,6 @@
   color: #e0e0e0;
 }
 
-/* =============== BLOC BAC À VENIR =============== */
-.pending-results {
-  padding: 2rem;
-  border-left: 6px solid #1e63e2;
-  border-radius: 14px;
-  margin-bottom: 2.5rem;
-  color: #1a1a1a;
-  box-shadow: 0 4px 16px rgba(30, 99, 226, 0.1);
-}
-
-.dark .pending-results {
-  background: #1e2b40;
-  color: #fff;
-  border-left-color: #6caeff;
-}
-
-/* Slogan attente */
-.stay-tuned {
-  font-style: italic;
-  font-weight: 600;
-  margin-top: 0.5rem;
-  color: #0e3db3;
-}
-
-.dark .stay-tuned {
-  color: #c7dfff;
-}
 
 /* =============== COURS DE VACANCES =============== */
 .vacation-course {
