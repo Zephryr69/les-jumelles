@@ -31,8 +31,10 @@ export default function AboutPage() {
             <p>
               Notre équipe d&apos;enseignants qualifiés, notamment en bilinguisme, assure un encadrement
               bienveillant et rigoureux — avec, chaque année, d&apos;excellents résultats aux examens
-              nationaux. Nous accueillons aussi les enfants issus d&apos;écoles non bilingues, sans les
-              pénaliser, avec un accompagnement adapté à leur intégration.
+              nationaux. Le directeur est lui-même professeur certifié d&apos;anglais, spécialiste de
+              l&apos;approche bilingue. Nous accueillons aussi les enfants issus d&apos;écoles non
+              bilingues : ils ne sont jamais rétrogradés dans une classe inférieure, mais accompagnés
+              pour combler l&apos;écart.
             </p>
           </div>
         </section>

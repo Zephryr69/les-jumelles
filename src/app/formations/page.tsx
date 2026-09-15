@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LevelTabs from "@/components/LevelTabs";
-import { Check, ChevronRight } from "lucide-react";
+import { Check, ChevronRight, Quote } from "lucide-react";
 
 export const metadata = {
   title: "Formations | Les Jumelles",
@@ -15,7 +15,7 @@ export default function FormationsPage() {
         <div className="breadcrumb"><Link href="/">Accueil</Link><ChevronRight className="icon" /><span>Formations</span></div>
         <div className="training-heading">
           <div className="page-intro"><h1>Du premier pas<br /><em>au projet d&apos;avenir.</em></h1></div>
-          <p>Un parcours continu, de la pré-maternelle à la terminale, pour construire les apprentissages sans perdre le plaisir de découvrir.</p>
+          <p>L&apos;école bilingue moderne de vos rêves. Un parcours continu, de la pré-maternelle à la terminale, pour construire les apprentissages sans perdre le plaisir de découvrir.</p>
         </div>
 
         <LevelTabs />
@@ -43,6 +43,52 @@ export default function FormationsPage() {
           </ul>
         </section>
 
+        <section className="section">
+          <div className="section-heading">
+            <h2>Pourquoi choisir<br />«Les Jumelles».</h2>
+          </div>
+          <p className="vs-text" style={{ marginBottom: 36 }}>
+            L&apos;enseignement de l&apos;anglais aux petits enfants de la maternelle et du primaire,
+            dans un espace francophone comme le Bénin, est un projet pédagogique à la fois pertinent
+            et délicat. Il exige un grand professionnalisme — il ne suffit pas d&apos;être professeur
+            d&apos;anglais pour le réussir.
+          </p>
+          <div className="why-us-grid">
+            <div className="why-us-card">
+              <span className="why-us-number">02</span>
+              <h3>Un directeur spécialiste</h3>
+              <p>Le directeur est lui-même professeur certifié d&apos;anglais, spécialiste de l&apos;approche bilingue français-anglais.</p>
+            </div>
+            <div className="why-us-card">
+              <span className="why-us-number">03</span>
+              <h3>Des clubs d&apos;anglais mensuels</h3>
+              <p>Organisés une fois par mois pour tous les apprenants, de la maternelle au collège, afin de renforcer leurs aptitudes à parler la langue.</p>
+            </div>
+            <div className="why-us-card">
+              <span className="why-us-number">04</span>
+              <h3>Aucune rétrogradation</h3>
+              <p>Les enfants venus d&apos;écoles non bilingues ne sont jamais retournés dans une classe inférieure, contrairement à ce qui se fait ailleurs.</p>
+            </div>
+            <div className="why-us-card">
+              <span className="why-us-number">05</span>
+              <h3>Une garderie</h3>
+              <p>Au profit des enfants qui passent le midi à l&apos;école.</p>
+            </div>
+            <div className="why-us-card">
+              <span className="why-us-number">06</span>
+              <h3>Une école à cantine</h3>
+              <p>Trois options de menu disponibles ; élèves et personnel mangent en toute sécurité. <Link href="/vie-scolaire" className="text-link" style={{ display: "inline" }}>En savoir plus</Link></p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="mission-quote" style={{ position: "static", maxWidth: 560 }}>
+            <Quote className="icon" />
+            <p>À «Les Jumelles», nous formons pour un label.<br />L&apos;approche bilingue est un art.</p>
+          </div>
+        </section>
+
         <section className="faq-section">
           <h2>Vos questions, simplement.</h2>
           <details>
@@ -59,7 +105,7 @@ export default function FormationsPage() {
           </details>
           <details>
             <summary>Comment connaître les places disponibles sur chaque site ?</summary>
-            <p>Notre équipe vous renseigne par téléphone ou WhatsApp au +229 01 97 29 44 34 ou au +229 01 96 67 70 04. La répartition des niveaux entre l&apos;école-mère et l&apos;annexe est à confirmer avec le secrétariat.</p>
+            <p>Notre équipe vous renseigne par téléphone ou WhatsApp au +229 01 97 29 44 34. La répartition des niveaux entre l&apos;école-mère et l&apos;annexe est à confirmer avec le secrétariat.</p>
           </details>
         </section>
       </div>

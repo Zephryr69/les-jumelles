@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Check, ChevronRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Check, ChevronRight } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export const metadata = {
   title: "Inscription | Les Jumelles",
@@ -25,7 +26,7 @@ export default function InscriptionPage() {
           <h2>Trois étapes pour se rencontrer.</h2>
           <div className="admission-steps">
             <div><span className="step-number">1</span><h3>Prenons contact</h3><p>Présentez-nous votre enfant et le niveau souhaité.</p></div>
-            <div><span className="step-number">2</span><h3>Entretien à l&apos;école</h3><p>Un entretien avec les parents est obligatoire, avec une évaluation diagnostique écrite si nécessaire.</p></div>
+            <div><span className="step-number">2</span><h3>Entretien à l&apos;école</h3><p>Un entretien avec les parents est obligatoire. Une évaluation diagnostique écrite s&apos;ajoute pour les nouveaux élèves dont le dossier ne rassure pas l&apos;administration.</p></div>
             <div><span className="step-number">3</span><h3>Préparons son dossier</h3><p>Réunissez les pièces et finalisez l&apos;inscription au secrétariat.</p></div>
           </div>
 
@@ -42,65 +43,151 @@ export default function InscriptionPage() {
 
           <section className="documents">
             <h3>Grille tarifaire détaillée</h3>
-            <p>Les frais comprennent l&apos;inscription, la scolarité, les travaux dirigés (TD) et les activités.
-              Le paiement peut se faire en plusieurs tranches — aucune somme encaissée ne peut être remboursée.</p>
+            <p>Les frais de formation comprennent l&apos;inscription (ou la réinscription) et la
+              scolarité. Le paiement peut se faire en plusieurs tranches (à la rentrée, fin
+              novembre, fin janvier) — aucune somme encaissée ne peut être remboursée.</p>
             <div style={{ overflowX: "auto" }}>
-              <table className="fee-table" aria-label="Détail des tarifs par niveau" style={{ color: "var(--ink)", width: "100%" }}>
+              <table className="fee-table" aria-label="Frais de formation par niveau" style={{ color: "var(--ink)", width: "100%" }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid var(--line)" }}>
                     <th scope="col" style={{ textAlign: "left", padding: "10px 8px" }}>Classe</th>
                     <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>Inscription</th>
-                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>Scolarité</th>
-                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>TD</th>
-                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>Activités</th>
-                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px", color: "var(--blue-deep)", fontWeight: 600 }}>Total</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>Réinscription</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>Frais de formation</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px", color: "var(--blue-deep)", fontWeight: 600 }}>Total (inscription)</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px", color: "var(--blue-deep)", fontWeight: 600 }}>Total (réinscription)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style={{ borderBottom: "1px solid var(--line)" }}>
                     <td style={{ padding: "10px 8px" }}>Pré-maternelle</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>5 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>85 000 F</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>—</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>10 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>95 000 F</td>
                     <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>100 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>—</td>
                   </tr>
                   <tr style={{ borderBottom: "1px solid var(--line)" }}>
                     <td style={{ padding: "10px 8px" }}>Maternelle 1 &amp; 2</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>5 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>78 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>—</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>10 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>4 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>88 000 F</td>
                     <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>93 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>92 000 F</td>
                   </tr>
                   <tr style={{ borderBottom: "1px solid var(--line)" }}>
-                    <td style={{ padding: "10px 8px" }}>Primaire (CP à CM2)</td>
+                    <td style={{ padding: "10px 8px" }}>Primaire (CI au CM2)</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>5 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>83 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>13 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>10 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>111 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>4 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>93 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>98 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>97 000 F</td>
                   </tr>
                   <tr style={{ borderBottom: "1px solid var(--line)" }}>
-                    <td style={{ padding: "10px 8px" }}>Collège</td>
+                    <td style={{ padding: "10px 8px" }}>Collège (6e à la 3e)</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>5 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>4 000 F</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>113 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>15 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>10 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>143 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>118 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>117 000 F</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <td style={{ padding: "10px 8px" }}>Seconde D</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>5 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>4 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>125 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>130 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>129 000 F</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: "10px 8px" }}>Lycée (Série D)</td>
+                    <td style={{ padding: "10px 8px" }}>Première D &amp; Terminale D</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>5 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>4 000 F</td>
                     <td style={{ textAlign: "right", padding: "10px 8px" }}>130 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px" }}>10 000 F</td>
-                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>170 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>135 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>134 000 F</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p>
+
+            <h3 style={{ marginTop: 32 }}>Le détail des 3 tranches</h3>
+            <p>Pour le total inscription (1ère fois), voici comment se répartissent les trois versements.</p>
+            <div style={{ overflowX: "auto" }}>
+              <table className="fee-table" aria-label="Répartition des tranches de paiement par classe" style={{ color: "var(--ink)", width: "100%" }}>
+                <thead>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <th scope="col" style={{ textAlign: "left", padding: "10px 8px" }}>Classe</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>1ère tranche <br />(à la rentrée)</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>2e tranche <br />(fin novembre)</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px" }}>3e tranche <br />(fin janvier)</th>
+                    <th scope="col" style={{ textAlign: "right", padding: "10px 8px", color: "var(--blue-deep)", fontWeight: 600 }}>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <td style={{ padding: "10px 8px" }}>Pré-maternelle (18 mois et +)</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>50 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>100 000 F</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <td style={{ padding: "10px 8px" }}>Maternelle 1 &amp; 2</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>43 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>93 000 F</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <td style={{ padding: "10px 8px" }}>Primaire (CI au CM2)</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>48 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>98 000 F</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <td style={{ padding: "10px 8px" }}>Collège (6e à la 3e)</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>78 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>20 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>20 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>118 000 F</td>
+                  </tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}>
+                    <td style={{ padding: "10px 8px" }}>Seconde D</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>75 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>30 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>25 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>130 000 F</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: "10px 8px" }}>Première D &amp; Terminale D</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>75 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>40 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px" }}>20 000 F</td>
+                    <td style={{ textAlign: "right", padding: "10px 8px", fontWeight: 600 }}>135 000 F</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style={{ marginTop: 32 }}>Travaux dirigés (TD)</h3>
+            <p>Frais annuels séparés, payés à l&apos;inscription. Pas de TD avant le CM1.</p>
+            <div style={{ overflowX: "auto" }}>
+              <table className="fee-table" aria-label="Travaux dirigés par classe" style={{ color: "var(--ink)", width: "100%", maxWidth: 480 }}>
+                <tbody>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}><td style={{ padding: "8px" }}>CM1</td><td style={{ textAlign: "right", padding: "8px" }}>13 000 F / an</td></tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}><td style={{ padding: "8px" }}>CM2</td><td style={{ textAlign: "right", padding: "8px" }}>15 000 F / an</td></tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}><td style={{ padding: "8px" }}>4ème</td><td style={{ textAlign: "right", padding: "8px" }}>20 000 F / an</td></tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}><td style={{ padding: "8px" }}>3ème</td><td style={{ textAlign: "right", padding: "8px" }}>25 000 F / an</td></tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}><td style={{ padding: "8px" }}>2nde</td><td style={{ textAlign: "right", padding: "8px" }}>25 000 F / an</td></tr>
+                  <tr style={{ borderBottom: "1px solid var(--line)" }}><td style={{ padding: "8px" }}>1ère</td><td style={{ textAlign: "right", padding: "8px" }}>25 000 F / an</td></tr>
+                  <tr><td style={{ padding: "8px" }}>Terminale D</td><td style={{ textAlign: "right", padding: "8px" }}>30 000 F / an</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style={{ marginTop: 20 }}>
               Vous pouvez télécharger le tableau complet des frais au format PDF :{" "}
               <a href="/docs/frais-inscription.pdf" target="_blank" rel="noopener noreferrer" className="text-link" style={{ display: "inline" }}>
                 Télécharger ici
@@ -156,19 +243,20 @@ export default function InscriptionPage() {
         <aside className="admission-sidebar">
           <section className="fees-box">
             <h2>Parlons des frais<br />de scolarité.</h2>
-            <p>Total tout compris par niveau (inscription, scolarité, TD et activités inclus).</p>
+            <p>Total inscription (1ère fois) par niveau — hors travaux dirigés (CM1 et plus).</p>
             <table className="fee-table" aria-label="Tarifs totaux par niveau">
               <tbody>
                 <tr><th scope="row">Pré-maternelle</th><td>100 000 F</td></tr>
                 <tr><th scope="row">Maternelle 1 &amp; 2</th><td>93 000 F</td></tr>
-                <tr><th scope="row">Primaire</th><td>111 000 F</td></tr>
-                <tr><th scope="row">Collège</th><td>143 000 F</td></tr>
-                <tr><th scope="row">Lycée (Série D)</th><td>170 000 F</td></tr>
+                <tr><th scope="row">Primaire</th><td>98 000 F</td></tr>
+                <tr><th scope="row">Collège</th><td>118 000 F</td></tr>
+                <tr><th scope="row">Seconde D</th><td>130 000 F</td></tr>
+                <tr><th scope="row">Première &amp; Tle D</th><td>135 000 F</td></tr>
               </tbody>
             </table>
-            <p>Le paiement peut se faire en plusieurs tranches. Aucune somme encaissée ne pourra être remboursée.</p>
+            <p>La réinscription coûte 1 000 F de moins. Le paiement peut se faire en plusieurs tranches. Aucune somme encaissée ne pourra être remboursée.</p>
             <a className="btn btn-whatsapp" href="https://wa.me/2290197858951?text=Bonjour%2C%20j%E2%80%99ai%20une%20question%20sur%20les%20tarifs%20et%20l%E2%80%99inscription." target="_blank" rel="noopener noreferrer" style={{ marginTop: 23 }}>
-              <MessageCircle className="icon" /> Une question sur les frais ?
+              <WhatsAppIcon className="icon" /> Une question sur les frais ?
             </a>
           </section>
           <div className="sidebar-help">
